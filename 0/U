@@ -44,7 +44,7 @@ boundaryField
     cylinderWalls
     {
         type            surfaceNormalFixedValue;
-        refValue        uniform -0.1;
+        refValue        uniform -0.0000;
     }
     outlet
     {

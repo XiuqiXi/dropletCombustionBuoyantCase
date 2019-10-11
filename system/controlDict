@@ -23,7 +23,7 @@ startTime       0;
 
 stopAt          endTime;
 
-endTime         5;
+endTime         2;
 
 deltaT          1e-6;
 
@@ -61,8 +61,31 @@ functions{
         fields
         (
             Qdot
+            T
         );
 	
 	}
+}
+
+functions{
+	fieldMinMax1
+	{
+		type 		fieldMinMax;
+		libs        ("libfieldFunctionObjects.so");
+		write       yes;
+        log         yes;
+        location    yes;
+        mode        magnitude;
+        fields
+        (
+            Qdot
+        );
+	
+	}
+}
+
+functions
+{
+	#includeFunc singleGraph
 }
 // ************************************************************************* //

@@ -34,7 +34,7 @@ boundaryField
     cylinderWalls
     {
         type            fixedValue;
-        value           uniform 0.03;
+        value           uniform 0.00;
     }
     outlet
     {

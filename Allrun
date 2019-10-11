@@ -30,6 +30,48 @@
 #------------------------------------------------------------------------------
 cd ${0%/*} || exit 1    # Run from this directory
 
+if [ ! -f "Coefficient" ];then
+echo "File does not exsit"
+else
+rm -rf Coefficient
+fi
+
+if [ ! -f "assimilationData" ];then
+echo "File does not exsit"
+else
+rm -rf assimilationData
+fi
+
+if [ ! -f "DropletProperties" ];then
+echo "File does not exsit"
+else
+rm -rf DropletProperties
+fi
+
+if [ ! -f "HeatFlux" ];then
+echo "File does not exsit"
+else
+rm -rf HeatFlux
+fi
+
+if [ ! -f "InjectionVelocity" ];then
+echo "File does not exsit"
+else
+rm -rf InjectionVelocity
+fi
+
+if [ ! -f "MassFlux" ];then
+echo "File does not exsit"
+else
+rm -rf MassFlux
+fi
+
+if [ ! -f "./postProcessing/fieldMinMax1/0/fieldMinMax.dat" ];then
+echo "File does not exsit"
+else
+rm -rf ./postProcessing/fieldMinMax1/0/fieldMinMax.dat
+fi
+
 DatarhoReactingBuoyantFoam > log 2>&1 &
 
 #------------------------------------------------------------------------------
